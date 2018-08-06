@@ -36,7 +36,7 @@ class SamlController extends Controller
         $metadata = $auth->getSettings()->getSPMetadata();
 
         $response = new Response($metadata);
-        $response->headers->set('Content-Type', 'xml');
+        $response->headers->set('Content-Type', 'text/xml; charset=UTF-8');
 
         return $response;
     }
